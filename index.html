@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="description" content="2026年10月3日荆州古城一日游。16人、3台车，9:30集合，17:30发车。上午宾阳楼和张居正故居，午饭后博物馆，关帝庙可取消。">
+<meta name="theme-color" content="#8e2a21">
+<title>荆州古城一日游 · 10月3日 · 16人</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%238e2a21'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='16' fill='%23f2d9a4' font-family='serif'%3E荆%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --ink:#2a241c;
+    --muted:#5e564b;
+    --zhu:#9d2c22;
+    --zhu-deep:#6f1d16;
+    --paper:#f3eadc;
+    --card:#fffdf8;
+    --line:#e4d5bf;
+    --gold:#8d6a2f;
+    --green:#1f6b3a;
+    --green-bg:#e7f4ea;
+    --rain:#1d5c86;
+    --rain-bg:#e7f1f8;
+    --warn:#8a5a12;
+    --warn-bg:#fff5e6;
+    --dock:4.25rem;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;scroll-padding-bottom:calc(var(--dock) + 1.25rem);}
+  body{
+    margin:0;
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif;
+    font-size:1rem;
+    line-height:1.65;
+    color:var(--ink);
+    background:var(--paper);
+    padding-bottom:calc(var(--dock) + env(safe-area-inset-bottom) + 1.25rem);
+    -webkit-text-size-adjust:100%;
+  }
+  img{max-width:100%;display:block;}
+  a{color:var(--zhu-deep);}
+  :focus-visible{outline:2px solid var(--zhu);outline-offset:2px;}
+  .page{max-width:40rem;margin:0 auto;}
+
+  header{
+    background:linear-gradient(165deg,#6f1d16 0%,#9d2c22 58%,#c45a3a 100%);
+    color:#fffaf3;
+    padding:calc(.8rem + env(safe-area-inset-top)) 1rem 1rem;
+  }
+  .kicker{margin:0;font-size:.8rem;letter-spacing:.18em;color:#f2d9a4;}
+  h1{margin:.35rem 0 .2rem;font-size:1.85rem;font-weight:700;letter-spacing:.04em;line-height:1.25;}
+  .lead{margin:0;font-size:.95rem;opacity:.95;}
+  .facts4{display:grid;grid-template-columns:1fr 1fr;gap:.55rem;margin:1rem 0 0;padding:0;list-style:none;}
+  .facts4 li{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);border-radius:.8rem;padding:.55rem .75rem;}
+  .facts4 b{display:block;font-size:1.15rem;line-height:1.3;}
+  .facts4 span{display:block;font-size:.85rem;opacity:.92;}
+  .wx{margin:.85rem 0 0;font-size:.85rem;color:#f6e7cf;}
+
+  main{padding:0 1rem 1.5rem;}
+  main{display:flow-root;}
+  section{margin-top:1.6rem;}
+  h2{margin:0 0 .7rem;font-size:1.25rem;line-height:1.35;color:var(--zhu-deep);}
+  h3{margin:0;font-size:1.05rem;line-height:1.4;}
+  p{margin:.35rem 0 0;}
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:1rem;}
+  .pad{padding:.9rem 1rem 1rem;}
+
+  .must{background:var(--zhu);color:#fffaf3;border:0;}
+  .must h2{color:#fff;margin-bottom:.2rem;}
+  .must .sub{margin:0 0 .4rem;color:#f6e0c8;font-size:.9rem;}
+  .must ol{list-style:none;margin:0;padding:0;}
+  .must li{display:flex;gap:.7rem;align-items:flex-start;padding:.65rem 0;border-top:1px solid rgba(255,255,255,.22);}
+  .n{
+    flex:none;width:1.7rem;height:1.7rem;border-radius:50%;
+    background:#f2d9a4;color:var(--zhu-deep);font-weight:700;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .must strong{display:block;font-size:1.02rem;}
+  .must p{margin:.15rem 0 0;color:#f8e7d8;font-size:.92rem;}
+
+  .ok{background:var(--green-bg);border:1px solid #b7d8c2;border-radius:1rem;padding:.9rem 1rem;margin-top:.75rem;}
+  .ok h2,.ok h3{color:var(--green);font-size:1.05rem;}
+  .ok p,.ok li{color:#1c3d28;}
+  .warn{background:var(--warn-bg);border:1px solid #efd3a4;border-radius:1rem;padding:.9rem 1rem;margin-top:.75rem;}
+  .warn h2,.warn h3{color:var(--warn);font-size:1.05rem;}
+  .rainbox{background:var(--rain-bg);border:1px solid #b9d3e6;border-radius:1rem;padding:.9rem 1rem;}
+  .rainbox h2,.rainbox h3{color:var(--rain);}
+
+  .slot{padding:.85rem .95rem .95rem;margin:0 0 .65rem;}
+  .slot .when{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.3rem .6rem;align-items:center;}
+  .slot .when b{color:var(--zhu);font-variant-numeric:tabular-nums;font-size:1.05rem;}
+  .tag{flex:none;font-size:.75rem;font-weight:700;border-radius:999px;padding:.1rem .5rem;background:#f6efe3;color:var(--gold);}
+  .tag.hot{background:#fdecea;color:var(--zhu);}
+  .tag.free{background:var(--green-bg);color:var(--green);}
+  .tag.cut{background:#f3f0ea;color:#6d6458;}
+  .tag.buf{background:var(--rain-bg);color:var(--rain);}
+  .slot h3{margin-top:.2rem;}
+  .slot p{color:#433d34;font-size:.95rem;}
+  .slot.cut{background:#fbf8f3;}
+  .slot.buf{box-shadow:inset 3px 0 0 var(--rain);}
+  .slot.pin{box-shadow:inset 3px 0 0 var(--zhu);}
+
+  .cuts{margin:.2rem 0 0;padding:0;list-style:none;}
+  .cuts li{display:flex;gap:.6rem;align-items:flex-start;padding:.55rem 0;border-top:1px solid #f0e0c4;}
+  .cuts b{flex:none;color:var(--zhu);}
+
+  .steps{list-style:none;margin:.4rem 0 0;padding:0;}
+  .steps li{padding:.75rem 0;border-top:1px solid var(--line);}
+  .steps li:first-child{border-top:0;}
+  .go{
+    display:flex;align-items:center;justify-content:center;
+    min-height:2.75rem;margin-top:.45rem;border-radius:.7rem;
+    background:var(--zhu);color:#fff;text-decoration:none;font-weight:700;
+  }
+  .go.alt{background:#fff;color:var(--zhu-deep);border:1px solid var(--line);}
+
+  .pills{display:flex;flex-wrap:wrap;gap:.4rem;margin:.55rem 0 0;padding:0;list-style:none;}
+  .pills li{background:#f6f0e4;border-radius:999px;padding:.2rem .65rem;font-size:.85rem;}
+
+  figure{margin:0;}
+  figure img{width:100%;height:11.5rem;object-fit:cover;background:#ddd;}
+  .hero img{height:12.5rem;border-radius:1rem;}
+  figcaption{font-size:.75rem;color:#8a7d68;padding:.35rem .1rem 0;}
+  .spot{overflow:hidden;margin:0 0 .75rem;}
+  .spot .pad{padding:.8rem .95rem 1rem;}
+  .spot .en{margin:0;font-size:.75rem;letter-spacing:.08em;color:#9a8b72;}
+
+  .foods{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;}
+  .food .pad{padding:.7rem .75rem .8rem;}
+  .food h3{font-size:1rem;}
+  .food p{font-size:.88rem;color:var(--muted);margin:0;}
+  .price{display:block;margin-top:.25rem;color:var(--zhu);font-weight:700;font-size:.9rem;}
+
+  .bill{list-style:none;margin:.3rem 0 0;padding:0;}
+  .bill li{display:flex;justify-content:space-between;gap:.8rem;padding:.6rem 0;border-top:1px solid var(--line);font-size:.95rem;}
+  .bill li:first-child{border-top:0;}
+  .bill b{font-variant-numeric:tabular-nums;white-space:nowrap;}
+  .total{font-weight:700;color:var(--zhu-deep);}
+
+  details{margin-top:.65rem;}
+  summary{
+    min-height:2.75rem;display:flex;align-items:center;
+    font-weight:700;cursor:pointer;color:var(--zhu-deep);
+  }
+  details p,details li{font-size:.92rem;color:#433d34;}
+  details ul{margin:.3rem 0 0;padding-left:1.1rem;}
+
+  .note{margin-top:.8rem;font-size:.8rem;color:#8a7d68;line-height:1.6;}
+  footer{margin-top:1.4rem;font-size:.75rem;color:#8a7d68;line-height:1.7;}
+
+  .dock{
+    position:fixed;left:0;right:0;bottom:0;z-index:20;
+    display:flex;background:#fffdf8;border-top:1px solid var(--line);
+    padding-bottom:env(safe-area-inset-bottom);
+  }
+  .dock a{
+    flex:1;min-height:var(--dock);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-decoration:none;color:#6d6458;font-size:.72rem;font-weight:600;gap:.05rem;
+  }
+  .dock a b{font-size:.95rem;color:#3a3228;font-weight:700;}
+  .dock a.on{color:var(--zhu);background:#fbf3ea;}
+  .dock a.on b{color:var(--zhu);}
+
+  @media (min-width:720px){
+    header{border-radius:0 0 1.2rem 1.2rem;}
+    .hero img{height:16rem;}
+    figure img{height:14rem;}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+<header>
+  <p class="kicker">10月3日 · 周六 · 国庆</p>
+  <h1>荆州古城一日游</h1>
+  <p class="lead">16人 · 8位长者 · 3台车</p>
+  <ul class="facts4">
+    <li><b>09:30</b><span>东门集合</span></li>
+    <li><b>17:30</b><span>准时发车</span></li>
+    <li><b>只去4处</b><span>关帝庙可取消</span></li>
+    <li><b>有雨偏凉</b><span>约 15–22℃</span></li>
+  </ul>
+</header>
+
+<main>
+  <div id="must">
+    <section class="card must pad">
+      <h2>出发前只做这 3 件</h2>
+      <p class="sub">今晚做完，明天不用再临时找人。</p>
+      <ol>
+        <li>
+          <span class="n">1</span>
+          <div>
+            <strong>16 张身份证都带在身上</strong>
+            <p>免票、半价、进博物馆全靠它。先数清 70 岁以上有几位，在群里回复「身份证已带」。</p>
+          </div>
+        </li>
+        <li>
+          <span class="n">2</span>
+          <div>
+            <strong>订张居正街午餐：两桌</strong>
+            <p>告诉店家 11:50–12:10 到。订两桌 8 人，不要一桌坐 16 人。鱼糕、扣肉、藕汤为主，慢工菜最多一道。</p>
+          </div>
+        </li>
+        <li>
+          <span class="n">3</span>
+          <div>
+            <strong>每辆车备伞、雨衣、薄外套</strong>
+            <p>全员穿防滑鞋。长者带常备药。城砖和石板遇水很滑。</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <div class="ok">
+      <h2>博物馆不用抢预约</h2>
+      <p>荆州博物馆 9 月 21 日公告：国庆 10 月 1–7 日开放 <b>8:30–18:30</b>（18:00 停止入馆）。<b>个人参观免预约</b>，刷身份证或支付宝扫码入馆。亲友自驾按个人进，不必今晚在公众号抢票。</p>
+      <p>入口若把 16 人当成旅行社团队，再打 <a href="tel:07168494574">0716-8494574</a>。公告原文见 <a href="http://www.jzmsm.org/news-3310.html">博物馆假期开放公告</a>。</p>
+    </div>
+
+    <div class="warn">
+      <h3>到东门先看地，再决定走哪套</h3>
+      <p>能打伞、台阶只是湿：按下面主行程，先登宾阳楼。已经中雨、台阶积水：三台车直接去博物馆，点底部「雨天」。9:25 由一位总协调在群里发一句，三台车同一种走法。</p>
+    </div>
+  </div>
+
+  <figure class="hero">
+    <img src="images/binyanglou.jpg" alt="荆州古城东门宾阳楼">
+    <figcaption>东门宾阳楼。合影在这里的屋檐下拍，不放到傍晚。</figcaption>
+  </figure>
+
+  <section id="plan">
+    <h2>主行程 · 这样才走得完</h2>
+    <div class="warn">
+      <h3>原先的钟点，有三段来不及</h3>
+      <p>16 人里有 8 位长者，还要挪 3 台车，国庆路上比平时慢。</p>
+      <ul class="cuts">
+        <li><b>1</b><span>集合只留 20 分钟。3 台车找免费车位再点名，至少 30 分钟。</span></li>
+        <li><b>2</b><span>午饭后只留 20 分钟到博物馆。开车、停车、步行、刷证，要留 40 分钟。</span></li>
+        <li><b>3</b><span>16:00 后连走关帝庙、三义街、护城河，70 分钟走不完，车也不在东门了。</span></li>
+      </ul>
+      <p>下面 8 段是重排后的时间。全天就这 4 个点：宾阳楼、张居正故居、午餐、博物馆。关帝庙超时就整段取消。</p>
+    </div>
+
+    <div class="card slot pin" style="margin-top:.75rem;">
+      <div class="when"><b>09:30–10:00</b><span class="tag hot">必做 · 30分钟</span></div>
+      <h3>东门金凤广场停车、点名</h3>
+      <p>导航统一搜「荆州古城金凤广场」。三台车停一起，认准「免费停车」标识。16 人到齐再走，不要先到的人先进城。</p>
+    </div>
+
+    <article class="card slot pin">
+      <div class="when"><b>10:00–11:05</b><span class="tag hot">必做 · 65分钟</span></div>
+      <h3>宾阳楼，屋檐下合影</h3>
+      <p>有开城或巡游，最多看到 10:15，然后登楼。没有仪式就 10:00 直接上，多出的 15 分钟留给午饭或堵车，不要再加景点。</p>
+      <p>城墙只走东门这一小段。合影 5 分钟，指定 1 个人拍。下雨城砖滑，长者留在城楼里，上下台阶要扶。</p>
+    </article>
+
+    <article class="card slot">
+      <div class="when"><b>11:05–12:05</b><span class="tag">必做 · 60分钟</span></div>
+      <h3>步行到张居正故居</h3>
+      <p>沿张居正街走，大约 15 分钟，街上有屋檐。故居里大约 45 分钟，回廊能避雨，有地方坐。走不动的人在前院歇，不必走完。</p>
+    </article>
+
+    <article class="card slot pin">
+      <div class="when"><b>12:05–13:25</b><span class="tag hot">必做 · 80分钟</span></div>
+      <h3>午餐，13:25 必须离开</h3>
+      <p>就在张居正街吃，上午的车先不动。两桌上菜更快。13:25 结账走人，一个人去兑早堂面的话，不能让全团在店门口等。</p>
+    </article>
+
+    <article class="card slot buf">
+      <div class="when"><b>13:25–14:05</b><span class="tag buf">缓冲 · 40分钟</span></div>
+      <h3>三台车一起去博物馆</h3>
+      <p>导航「荆州博物馆」，跟第一辆车走。这段把堵车、停车、走到门口、刷身份证都算进去了。环城观光车只在宾阳楼和关帝庙停，到不了博物馆，不要等它。</p>
+    </article>
+
+    <article class="card slot pin">
+      <div class="when"><b>14:05–15:35</b><span class="tag hot">必做 · 90分钟</span></div>
+      <h3>博物馆，先看这四件</h3>
+      <p>刷身份证或支付宝进。按这个顺序看，看完再逛别的：西汉古尸、越王州勾剑、战国丝绸、虎座凤鸟悬鼓。石刻新展顺路看。15:35 门口集合，没看完也走。走之前上厕所。</p>
+    </article>
+
+    <article class="card slot cut">
+      <div class="when"><b>15:35–16:35</b><span class="tag cut">弹性 · 超时取消</span></div>
+      <h3>关帝庙，全天唯一可删的点</h3>
+      <p>开车约 20 分钟，庙里约 40 分钟，殿内不受雨影响。人累、雨大，或者博物馆已经超时，就取消。取消后在博物馆停车场休息，不再另找地方。</p>
+    </article>
+
+    <article class="card slot pin">
+      <div class="when"><b>16:35–17:30</b><span class="tag hot">必做 · 发车</span></div>
+      <h3>休息、清点、从这里直接走</h3>
+      <p>不去三义街，不回东门，不去大赛巷。17:15 前三台车点完名，17:30 发车。长者添一件外套。过长江大桥把速度放低。</p>
+    </article>
+
+    <div class="card pad" style="margin-top:.2rem;">
+      <h3>已经晚了，按这个顺序减</h3>
+      <ul class="cuts">
+        <li><b>先砍</b><span>取消关帝庙，大约省 1 小时。</span></li>
+        <li><b>再砍</b><span>张居正故居缩到 30 分钟，宾阳楼只拍照、不上城墙。</span></li>
+        <li><b>不砍</b><span>午餐至少留 70 分钟，博物馆至少留 75 分钟，17:30 的发车不往后推。</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="cars">
+    <h2>三台车只停三个地方</h2>
+    <div class="card pad">
+      <ol class="steps">
+        <li>
+          <h3>上午 · 金凤广场</h3>
+          <p>宾阳楼、张居正故居、午饭都从这里步行，中途不挪车。</p>
+          <a class="go" href="https://uri.amap.com/search?keyword=%E8%8D%86%E5%B7%9E%E5%8F%A4%E5%9F%8E%E9%87%91%E5%87%A4%E5%B9%BF%E5%9C%BA&amp;src=jingzhou&amp;callnative=1">导航到金凤广场</a>
+        </li>
+        <li>
+          <h3>午饭后 · 荆州博物馆</h3>
+          <p>13:25 三车同时出发。到了先停车，再慢慢走到门口。</p>
+          <a class="go" href="https://uri.amap.com/search?keyword=%E8%8D%86%E5%B7%9E%E5%8D%9A%E7%89%A9%E9%A6%86&amp;src=jingzhou&amp;callnative=1">导航到博物馆</a>
+        </li>
+        <li>
+          <h3>傍晚 · 关帝庙停车场</h3>
+          <p>只有去关帝庙才开这一段。不去的话，就从博物馆停车场直接返程。</p>
+          <a class="go alt" href="https://uri.amap.com/search?keyword=%E8%8D%86%E5%B7%9E%E5%85%B3%E5%B8%9D%E5%BA%99&amp;src=jingzhou&amp;callnative=1">导航到关帝庙</a>
+        </li>
+      </ol>
+      <p>每车 5–6 人，设 1 名车长点名。每次上车前在群里发定位。长者上下车有人扶，过马路走内侧。</p>
+    </div>
+
+    <div class="warn">
+      <h3>这三样今天不排</h3>
+      <p><b>大赛巷</b>在沙市，离古城开车大约 20 分钟，不是东门旁边的小吃巷。傍晚绕过去，17:30 回不来。</p>
+      <p><b>三义街、护城河</b>就在关帝庙附近，但 16 人再走一圈就会误发车。看见了也不要加。</p>
+      <p><b>画舫</b>单程就要约 20 分钟，下雨体验差。不买 115 元含船的那一档。</p>
+    </div>
+  </section>
+
+  <section id="rain">
+    <h2>雨天方案</h2>
+    <div class="rainbox">
+      <h3>9:25 如果已经是中雨</h3>
+      <p>三台车不要停进东门，直接开去博物馆。群里只发一句：「改雨天方案」。</p>
+      <ul class="cuts">
+        <li><b>09:30</b><span>直接到博物馆，刷证进馆。</span></li>
+        <li><b>09:50–11:20</b><span>馆内 90 分钟，还是先看那四件。</span></li>
+        <li><b>11:20–11:45</b><span>开车到张居正街。</span></li>
+        <li><b>11:45–13:10</b><span>午餐。所以订位要说可能 11:50 就到。</span></li>
+        <li><b>13:10–13:55</b><span>张居正故居，有屋顶。</span></li>
+        <li><b>14:00 起</b><span>雨停了再去宾阳楼，最多 40 分钟，含合影。雨不停就在屋檐下站 15 分钟，不上城墙。</span></li>
+        <li><b>之后</b><span>人还精神就去关帝庙；否则提前上车。最晚仍是 17:30 发车。</span></li>
+      </ul>
+    </div>
+    <div class="card pad" style="margin-top:.75rem;">
+      <h3>雨里走路</h3>
+      <p>城墙和石板湿了就滑。长者上下台阶，一扶、走慢、先看脚底。伞和雨衣都带，拍照时把伞交给旁边的人。风大的时候不在城楼边沿站。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>四个地方，看什么</h2>
+
+    <article class="card spot">
+      <img src="images/chengqiang.jpg" alt="荆州东门古城墙">
+      <div class="pad">
+        <p class="en">上午 · 约 50 分钟</p>
+        <h3>宾阳楼 · 东门城墙</h3>
+        <ul class="pills">
+          <li>门票 35 元，联票已含</li>
+          <li>70 岁以上免票</li>
+          <li>60–69 岁半价</li>
+        </ul>
+        <p>南方保存最完整的古城墙之一，周长 11 公里多。今天只上东门这一段。雨天长者留在城楼内。</p>
+      </div>
+    </article>
+
+    <article class="card spot">
+      <img src="images/zhangjuzheng.jpg" alt="张居正故居">
+      <div class="pad">
+        <p class="en">上午 · 约 45 分钟</p>
+        <h3>张居正故居</h3>
+        <ul class="pills">
+          <li>门票 20 元，联票已含</li>
+          <li>有回廊，小雨能逛</li>
+          <li>可以坐着歇</li>
+        </ul>
+        <p>明代首辅张居正的宅子。两进院子加碑廊，是上午最适合慢慢走的一站。</p>
+      </div>
+    </article>
+
+    <article class="card spot">
+      <img src="images/museum.jpg" alt="荆州博物馆">
+      <div class="pad">
+        <p class="en">下午 · 90 分钟 · 全天重点</p>
+        <h3>荆州博物馆</h3>
+        <ul class="pills">
+          <li>免费</li>
+          <li>个人免预约</li>
+          <li>国庆开到 18:30</li>
+        </ul>
+        <p>先看古尸、越王州勾剑、战国丝绸、虎座凤鸟悬鼓。国庆有部分石刻第一次展出，顺路即可，不单独占时间。</p>
+      </div>
+    </article>
+
+    <article class="card spot">
+      <img src="images/guandimiao.jpg" alt="荆州关帝庙">
+      <div class="pad">
+        <p class="en">傍晚 · 可整段取消</p>
+        <h3>关帝庙</h3>
+        <ul class="pills">
+          <li>门票 20 元，联票已含</li>
+          <li>殿内避雨</li>
+          <li>约 40 分钟</li>
+        </ul>
+        <p>关羽镇守荆州的府邸旧址，在老南门内。请香随喜就好。时间不够就放弃，不要压缩博物馆来换它。</p>
+      </div>
+    </article>
+  </section>
+
+  <section>
+    <h2>午饭怎么点</h2>
+    <figure>
+      <img src="images/yugao.jpg" alt="荆州鱼糕" style="height:9rem;border-radius:1rem;object-fit:cover;width:100%;">
+      <figcaption>荆州鱼糕，无刺，两桌都点。</figcaption>
+    </figure>
+    <div class="foods">
+      <article class="card food">
+        <div class="pad">
+          <h3>荆州鱼糕</h3>
+          <p>无刺，长者能吃。</p>
+          <span class="price">约 28–48 元</span>
+        </div>
+      </article>
+      <article class="card food">
+        <div class="pad">
+          <h3>千张扣肉</h3>
+          <p>软，适合下饭。可以点。</p>
+          <span class="price">约 38–58 元</span>
+        </div>
+      </article>
+      <article class="card food">
+        <div class="pad">
+          <h3>莲藕排骨汤</h3>
+          <p>热汤暖身。两桌共用一份大汤。</p>
+          <span class="price">按店里大份</span>
+        </div>
+      </article>
+      <article class="card food">
+        <div class="pad">
+          <h3>皮条鳝鱼</h3>
+          <p>上菜慢。两桌最多共点一道。</p>
+          <span class="price">约 48–68 元</span>
+        </div>
+      </article>
+    </div>
+    <p class="note">持 95 元环城套票，国庆期间或可兑一碗早堂面。派 1 个人去兑，全团不要排队。70 岁以上不要为了这碗面去买全价联票。公安锅盔、矮子馅饼有就顺手买，不专程去沙市大赛巷。</p>
+  </section>
+
+  <section id="cost">
+    <h2>费用 · 先看门票差在年龄</h2>
+    <div class="card pad">
+      <h3>成人 8 人买 95 元联票</h3>
+      <p>含宾阳楼、张居正故居、关帝庙和环城观光车，不含画舫。单买三张门票是 35+20+20=75 元。今天用不上观光车，不兑面的话，买单票每人省 20 元，8 人省 160 元。</p>
+      <ul class="bill">
+        <li><span>长者都满 70 岁，门票全免</span><b>门票 760</b></li>
+        <li><span>再加午餐，人均 50–70 元</span><b>约 1,560–1,880</b></li>
+        <li class="total"><span>这时人均</span><b>约 100–120</b></li>
+      </ul>
+    </div>
+    <div class="card pad" style="margin-top:.65rem;">
+      <h3>若 8 位长者都是 60–69 岁</h3>
+      <p>窗口买半价。联票半价大约 48 元一位，以当天窗口为准。70 岁以上仍是免票，不要跟着买联票。</p>
+      <ul class="bill">
+        <li><span>成人联票 760 + 长者半价约 384</span><b>门票约 1,144</b></li>
+        <li><span>再加同样的午餐</span><b>约 1,940–2,260</b></li>
+        <li class="total"><span>这时人均</span><b>约 120–140</b></li>
+      </ul>
+    </div>
+    <p class="note">年龄混着，总价就在上面两组之间。停车按国庆免费政策按 0 元估，认准免费标识。博物馆免费。10 月 1–7 日高速免费。油费、伴手礼另算。小吃不列入必花。</p>
+
+    <details class="card pad">
+      <summary>票价和免费政策从哪来</summary>
+      <ul>
+        <li>联票 95 元档：宾阳楼 + 张居正故居 + 关帝庙 + 环城观光车。含画舫的常见是 115 元，今天不买。</li>
+        <li>观光车线路公示为宾阳楼始发，只在宾阳楼和关帝庙上下车，末班大约 16:20，沿途不停，所以帮不上去博物馆。</li>
+        <li>70 岁以上免票、60–69 岁半价，按荆州景区现行优待，现场看身份证。</li>
+        <li>博物馆开放和免预约：博物馆 2026-09-21 公告。</li>
+        <li>停车：荆州国庆中心城区有大批泊位免费，以门口「免费停车」标识为准。</li>
+        <li>早堂面：湖北省文旅厅国庆「请客吃面」活动，持环城套票兑换，以现场还能兑为准。</li>
+      </ul>
+    </details>
+  </section>
+
+  <section>
+    <h2>需要打电话时</h2>
+    <div class="card pad">
+      <ul class="bill">
+        <li><span>博物馆，被当成团队时</span><b><a href="tel:07168494574">0716-8494574</a></b></li>
+        <li><span>旅游投诉</span><b><a href="tel:12345">12345</a></b></li>
+        <li><span>急救</span><b><a href="tel:120">120</a></b></li>
+        <li><span>报警、遗失</span><b><a href="tel:110">110</a></b></li>
+      </ul>
+      <p>最近的大医院是荆州市中心医院。东西落在景区，先找游客中心。</p>
+    </div>
+  </section>
+
+  <footer>
+    实景照片来自 Wikimedia Commons：宾阳楼与城墙 Fxqf（CC BY-SA 4.0），博物馆 DorisAntony（CC BY-SA 3.0），张居正故居与关帝庙（CC BY 3.0），鱼糕为同类公开实拍。<br>
+    天气按假期前后的公开预报整理：阴有雨、大约 15–22℃。风力预报不一致，返程过桥主动减速，出发早上再看一眼手机天气。<br>
+    门票和活动以 10 月 3 日景区门口公示为准。
+  </footer>
+</main>
+</div>
+
+<nav class="dock" aria-label="页面跳转">
+  <a href="#must"><b>出发</b>三件事</a>
+  <a href="#plan"><b>行程</b>时间表</a>
+  <a href="#rain"><b>雨天</b>备用</a>
+  <a href="#cost"><b>费用</b>门票</a>
+</nav>
+<script>
+(function () {
+  var links = Array.prototype.slice.call(document.querySelectorAll(".dock a"));
+  var sections = links.map(function (a) { return document.querySelector(a.getAttribute("href")); });
+  if (!("IntersectionObserver" in window)) return;
+  var obs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      links.forEach(function (link) {
+        link.classList.toggle("on", link.getAttribute("href") === "#" + entry.target.id);
+      });
+    });
+  }, { rootMargin: "-30% 0px -55% 0px", threshold: 0 });
+  sections.forEach(function (section) { if (section) obs.observe(section); });
+})();
+</script>
+</body>
+</html>
